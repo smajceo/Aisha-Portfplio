@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About – Aisha Portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img class="logo" src="logo.jpg" alt="Aisha portfolio logo">
+    <button class="menu-btn" id="menu-btn"><i class='bx bx-menu'></i></button>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="home">
+        <div class="home-info">
+            <h1>About Me</h1>
+            <p>Hello, I'm Aisha Ali Kime. I am a Social Media Manager and digital strategist based in Nigeria, passionate about helping brands grow online. My specialties include social media management, content creation, Instagram marketing, and optimizing brand visibility. Read more about my journey, skills, and commitment to creative, data-driven results.</p>
+            <ul>
+                <li>Social Media Strategy & Analytics</li>
+                <li>Content Creation & Copywriting</li>
+                <li>Instagram Growth & Insights</li>
+                <li>Branding & Visual Storytelling</li>
+                <li>SEO Optimization</li>
+            </ul>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Aisha-Profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    const navbar = document.getElementById('navbar');
+    const menuBtn = document.getElementById('menu-btn');
+    const overlay = document.getElementById('sidebar-overlay');
+    menuBtn.addEventListener('click', () => {
+        navbar.classList.add('open');
+        overlay.classList.add('active');
+    });
+    overlay.addEventListener('click', () => {
+        navbar.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+            navbar.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio – Aisha Portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img class="logo" src="logo.jpg" alt="Aisha portfolio logo">
+    <button class="menu-btn" id="menu-btn"><i class='bx bx-menu'></i></button>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="home">
+        <div class="home-info">
+            <h1>Portfolio & Results</h1>
+            <p>Explore some of my recent work and the outcomes I've achieved for clients and brands.</p>
+            <h2>Instagram Insights</h2>
+            <img src="image/insights.jpg" alt="Instagram Insights showing 51.1K views and 227 follows" style="max-width:100%;margin-bottom:12px;">
+            <h2>Content Created</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+                <img src="image/before-after.jpg" alt="Account before and after social media strategy" style="max-width:48%;border-radius:12px;">
+                <img src="image/content-icons.jpg" alt="Content Service Icons" style="max-width:48%;border-radius:12px;">
+            </div>
+            <h2>Growth & Consistency</h2>
+            <img src="image/monthly-highlights.jpg" alt="Monthly activity highlight showing reels and posts" style="max-width:100%;border-radius:12px;">
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Aisha-Profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    const navbar = document.getElementById('navbar');
+    const menuBtn = document.getElementById('menu-btn');
+    const overlay = document.getElementById('sidebar-overlay');
+    menuBtn.addEventListener('click', () => {
+        navbar.classList.add('open');
+        overlay.classList.add('active');
+    });
+    overlay.addEventListener('click', () => {
+        navbar.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+            navbar.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    });
+    </script>
+</body>
+</html>
