@@ -448,3 +448,84 @@ body {
 }
 
 /* rest of your CSS ... */
+
+/* --- Center the navbar links on large screens while keeping a fixed logo at top-left --- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* keep the visual navbar background and height as before */
+  min-height: 70px;
+  padding: 20px 5%;
+  display: block; /* allow absolute positioning of the <ul> */
+  z-index: 100; /* keep below logo if needed */
+}
+
+/* Center the nav UL across the full width */
+.navbar ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* center horizontally and vertically in the header bar */
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 101; /* above navbar background */
+}
+
+/* Make sure the logo stays above the nav links visually */
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 20000;
+}
+
+/* Mobile/small-screen: restore sidebar behavior and stack links inside sidebar */
+@media (max-width: 600px) {
+  .navbar {
+    /* mobile sidebar styles already defined in your file; re-use them */
+    padding: 13px 3%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: unset;
+    width: 72vw;
+    max-width: 330px;
+    height: 100vh;
+    transform: translateX(110%);
+    box-shadow: -2px 0 20px #0004;
+    z-index: 20001;
+  }
+
+  .navbar ul {
+    position: static;       /* undo absolute centering for mobile */
+    transform: none;
+    top: auto;
+    left: auto;
+    margin-top: 35px;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 22px;
+    width: 100%;
+    z-index: 20002;
+  }
+
+  .logo {
+    /* keep the smaller fixed logo for mobile */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 38px;
+    height: 38px;
+    z-index: 20003;
+  }
+}
