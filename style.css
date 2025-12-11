@@ -107,7 +107,7 @@ a {
     color: transparent;
     -webkit-text-stroke: .7px #7cf03d;
     animation: display-text 16s linear infinite;
-    animation-delay: calc(-5s * var(--i));
+    animation-delay: calc(-4s * var(--i));
 }
 
 @keyframes display-text {
