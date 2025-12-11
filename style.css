@@ -122,7 +122,7 @@ a {
     color: #7cf03d;
     white-space: nowrap;
     overflow: hidden;
-    animation: fill-text 5s linear infinite;
+    animation: fill-text 4s linear infinite;
 }
 
 @keyframes fill-text {
