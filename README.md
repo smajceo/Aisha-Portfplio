@@ -9,25 +9,6 @@ You can visit the live website here:
 
 ---
 
-📁 Project Structure
-
-Aisha-Portfolio/
-│── index.html
-│── style/
-│    └── style.css
-│── image/
-│    └── logo.jpg
-│── about/
-│    └── about.html
-│── contact/
-│    └── contact.html
-│── service/
-│    └── service.html
-│── portfolio/
-│    └── portfolio.html
-│── cv/
-│    └── cv.html
-
 
 ---
 
