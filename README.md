@@ -4,7 +4,7 @@ Welcome to my personal portfolio website!
 This project showcases my skills, experience, and work as a Social Media Manager, Content Creator, and Digital Marketer.
 
 You can visit the live website here:
-👉 https://smajceo.github.io/Aisha-Portflpio/ (update with your actual GitHub Pages link)
+👉 https://smajceo.github.io/Aisha-Portfplio/ (update with your actual GitHub Pages link)
 
 
 ---
